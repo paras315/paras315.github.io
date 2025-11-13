@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Paras Sorathiya — Portfolio</title>
+  <meta name="description" content="Paras Sorathiya — Senior .NET Full Stack Developer">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site">
+    <aside class="left">
+      <div class="profile-card">
+        <img src="paras.png" alt="Paras Sorathiya" class="avatar">
+        <h1 class="name">Paras Sorathiya</h1>
+        <p class="title">.NET Full Stack Developer</p>
+        <p class="location">Surat, India</p>
+        <div class="actions">
+          <a class="btn" href="Paras_Sorathiya_Resume_6Years_Exp.pdf" target="_blank">Resume</a>
+          <a class="btn ghost" href="mailto:paras.sorathiya93@gmail.com">Contact</a>
+        </div>
+        <div class="links">
+          <a href="https://github.com/paras315" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/paras-sorathiya-87692992" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="right">
+      <section class="intro">
+        <h2>Hello, I'm <span class="accent">Paras</span></h2>
+        <p class="lead">I build reliable backend systems and intuitive front-ends using <strong>.NET</strong>, <strong>Angular</strong> and <strong>Azure</strong>.</p>
+      </section>
+
+      <section id="projects" class="projects">
+        <h3>Selected Projects</h3>
+        <div class="cards">
+          <article class="project">
+            <h4>NST Web</h4>
+            <p>Online bidding & product PO/billing system. Stored procedures, billing, and day-to-day support.</p>
+            <div class="meta">C# · .NET · SQL Server</div>
+          </article>
+
+          <article class="project">
+            <h4>ITO Portal</h4>
+            <p>Full-stack portal with Dotnet Core, OpenAPI and Azure B2C integrations; responsive UI with Bootstrap.</p>
+            <div class="meta">Dotnet Core · Azure · Bootstrap</div>
+          </article>
+
+          <article class="project">
+            <h4>Event Booking</h4>
+            <p>Angular frontend with .NET APIs, token-based auth and notifications.</p>
+            <div class="meta">Angular · ASP.NET Core · Azure</div>
+          </article>
+
+          <article class="project">
+            <h4>Bullion (E‑commerce)</h4>
+            <p>Admin/back-office application for e-commerce operations and reporting. Introduced TDD and CI/CD.</p>
+            <div class="meta">ASP.NET Core · CI/CD · Azure</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:paras.sorathiya93@gmail.com">paras.sorathiya93@gmail.com</a></p>
+        <p>Phone: +91-9265621820</p>
+      </section>
+
+      <footer class="footer">© <span id="yr"></span> Paras Sorathiya</footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('yr').innerText = new Date().getFullYear();
+    // smooth scroll for hash links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const id = this.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth'});
+      })
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9CA3AF;
+  --accent:#7c3aed;
+  --glass: rgba(255,255,255,0.04);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#071023 0%,#081328 100%);color:#E6EEF8}
+.site{max-width:1000px;margin:40px auto;display:grid;grid-template-columns:280px 1fr;gap:28px;padding:24px}
+.left{position:sticky;top:24px;height:fit-content}
+.profile-card{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.6);text-align:center;border:1px solid rgba(255,255,255,0.03)}
+.avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;border:6px solid rgba(124,58,237,0.12);display:block;margin:6px auto}
+.name{margin:12px 0 4px;font-size:20px;color:#fff}
+.title{color:var(--accent);font-weight:600;margin:0 0 6px}
+.location{color:var(--muted);font-size:13px;margin-bottom:10px}
+.actions{display:flex;gap:8px;justify-content:center;margin-top:10px}
+.btn{background:var(--accent);color:white;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600;display:inline-block}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+.links{margin-top:12px;color:var(--muted);font-size:13px;display:flex;gap:8px;justify-content:center}
+.right{padding:6px 0}
+.intro{margin-bottom:18px}
+.intro h2{font-size:28px;margin:0 0 8px}
+.intro .lead{color:var(--muted);margin:0 0 6px}
+.projects h3{margin-top:0;color:#fff;font-size:18px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.project{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+.project h4{margin:0 0 6px;color:#fff}
+.meta{color:var(--muted);font-size:13px;margin-top:8px}
+.contact{margin-top:18px;background:var(--glass);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+.footer{color:var(--muted);margin-top:20px;font-size:13px;text-align:left}
+
+/* responsive */
+@media (max-width:880px){
+  .site{grid-template-columns:1fr;padding:18px;gap:16px}
+  .cards{grid-template-columns:1fr}
+  .left{position:relative;order:2}
+  .right{order:1}
+  .footer{text-align:center}
+}
